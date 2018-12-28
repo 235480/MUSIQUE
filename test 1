@@ -1,0 +1,32 @@
+import winsound
+fichier=str(input("entrez les notes "))
+##fichier=open("fichiertexte","w")
+##fichier.write(partition)
+##fichier.close()
+i=0
+while fichier[i]!="  ":
+    if fichier[i]=="d" and (fichier[i+2]=="d" or fichier[i+2]=="#"):
+           winsound.PlaySound('.\dod',winsound.SND_FILENAME)
+    elif fichier[i]=="d" and fichier[i+2]==" ":
+            winsound.PlaySound('.\do',winsound.SND_FILENAME)
+    elif fichier[i]=="r":
+            winsound.Beep(587,500)
+    elif fichier[i]=="m" and fichier[i+2]==" ":
+            winsound.PlaySound('.\mi',winsound.SND_FILENAME)
+    elif fichier[i]=="m" and fichier[i+2]=="b":
+            winsound.PlaySound('.\mib',winsound.SND_FILENAME)
+    elif fichier[i]=="f" and fichier[i+2]==" ":
+            winsound.Beep(698,500)
+    elif fichier[i]=="f"and (fichier[i+2]=="d" or fichier[i+2]=="#"):
+            winsound.Beep(698,500)
+    elif fichier[i]=="s" and fichier[i+3]==" ":
+            winsound.PlaySound('.\sol',winsound.SND_FILENAME)
+    elif fichier[i]=="s" and (fichier[i+3]=="d" or fichier[i+3]=="#"):
+            winsound.PlaySound('.\sold',winsound.SND_FILENAME)
+    elif fichier[i]=="l":
+            winsound.PlaySound('.\la',winsound.SND_FILENAME)
+    elif fichier[i]=="s" and fichier[i+2]==" ":
+            winsound.PlaySound('.\si',winsound.SND_FILENAME)
+    elif fichier[i]=="s" and fichier[i+2]=="b":
+            winsound.PlaySound('.\sib',winsound.SND_FILENAME)
+    i=i+1
